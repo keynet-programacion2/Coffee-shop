@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './home.css'
-import { Navbar } from '../navbar/navbar'
+import React, { Component } from "react";
+import ReactDOM from "react-dom/client";
+import "./home.css";
+import { Navbar } from "../navbar/navbar";
+import { Section } from "./section/section";
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Navbar/>
-
-    
-  </React.StrictMode>,
-)
+export function Home() {
+  return (
+    <div>
+      <Navbar />
+      <Section />
+    </div>
+  );
+}
