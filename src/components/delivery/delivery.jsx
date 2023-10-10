@@ -14,7 +14,7 @@ export function Delivery() {
             <div className={styles.infodelivery}>
                 
             </div>
-            <div>
+            <div className={styles.img}>
             <img src="/assets/delivery/delivery.png" alt="rider"/>
             </div>
       

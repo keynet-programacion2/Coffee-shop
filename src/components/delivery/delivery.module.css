@@ -6,8 +6,10 @@ margin-top: 5rem;
     width: 27.875rem;
     height: 11.875rem;
     padding: 40px;
+    background: linear-gradient(to right, yellow, purple);
     border-radius: 6px 2.25rem;
-    border-image: linear-gradient(45deg,red,blue) 10;
+    position: relative;
+  
 }
 
 h2{
@@ -23,5 +25,6 @@ h3{
 
 .img{
     float: right;
+    justify-content: start;
 }
 
