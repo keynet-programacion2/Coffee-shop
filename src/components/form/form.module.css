@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+h2{
+color: #403937;
+font-size: 18px;
+font-family: "Baloo 2", cursive;
+
+}

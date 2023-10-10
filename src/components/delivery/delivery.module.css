@@ -1,0 +1,27 @@
+.container{
+margin-top: 5rem;
+}
+
+.infodelivery{
+    width: 27.875rem;
+    height: 11.875rem;
+    padding: 40px;
+    border-radius: 6px 2.25rem;
+    border-image: linear-gradient(45deg,red,blue) 10;
+}
+
+h2{
+    color: #C47F17;
+    font-size: 2rem;
+    font-family: "Baloo 2", cursive;
+}
+
+h3{
+    margin-top: .25rem;
+    font-size: 1.25rem;
+}
+
+.img{
+    float: right;
+}
+

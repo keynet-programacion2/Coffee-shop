@@ -1,5 +1,5 @@
 .img {
-  width: 31.25rem;
+  width: 31.5rem;
   height: 22.5rem;
   float: right;
 }
@@ -17,6 +17,7 @@
   font-weight: 400;
   line-height: 130%;
   width: 35.625rem;
+  margin-bottom: 2.5rem;
 }
 
 .advantages {
