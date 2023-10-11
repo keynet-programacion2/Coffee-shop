@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import styles from "./form.module.css";
-import { Navbar } from "../navbar/navbar";
 import { Section } from "./section/section";
 import { Aside } from "./aside/aside";
 
 export function Form() {
   return (
-    <div className="wrapper">
-      <Navbar />
+    <div>
       <div className={styles.container}>
         <div className={styles.section}>
           <h2 className={styles.titles} >Completa tu pedido</h2>

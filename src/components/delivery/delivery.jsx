@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import styles from "./delivery.module.css";
-import { Navbar } from "../navbar/navbar";
 
 export function Delivery() {
   return (
-    <div className="wrapper">
-      <Navbar />
+    <div>
       <div className={styles.container}>
         <div className={styles.section}>
           <h2>¡Eh! orden confirmada</h2>
