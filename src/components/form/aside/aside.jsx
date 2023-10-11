@@ -18,7 +18,9 @@ export function Aside() {
         </div>
       </div>
       <div className={styles.button}>
-        <button>confirmar pedido</button>
+        <a href="/delivery">
+          <button>confirmar pedido</button>
+        </a>
       </div>
     </div>
   );

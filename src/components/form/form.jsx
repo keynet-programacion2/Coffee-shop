@@ -10,11 +10,11 @@ export function Form() {
       <Navbar />
       <div className={styles.container}>
         <div className={styles.section}>
-          <h2>Completa tu pedido</h2>
+          <h2 className={styles.titles} >Completa tu pedido</h2>
           < Section />
         </div>
         <div className={styles.aside}>
-          <h2>cafés seleccionados</h2>
+          <h2 className={styles.titles}>cafés seleccionados</h2>
           < Aside />
         </div>
       </div>
