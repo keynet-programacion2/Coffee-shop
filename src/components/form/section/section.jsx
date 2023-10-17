@@ -71,13 +71,13 @@ export function Section() {
               </div>
               <div className={styles.options}>
             <input type="radio" value="1" name="type" id="r1" className={styles.radios}/>
-            <label for="r1"className={styles.labels1}
+            <label htmlFor="r1"className={styles.labels1}
               ><img src="/assets/form/credit.svg" /> tarjeta de crédito</label>
             <input type="radio" value="2" name="type" id="r2" className={styles.radios} />
-            <label for="r2" className={styles.labels2}
+            <label htmlFor="r2" className={styles.labels2}
               ><img src="/assets/form/debit.svg" /> tarjeta de débito</label>
             <input type="radio" value="3" name="type" id="r3" className={styles.radios}/>
-            <label for="r3" className={styles.labels2}
+            <label htmlFor="r3" className={styles.labels2}
               ><img src="/assets/form/cash.svg" /> contado</label>
           </div>
             </div>
