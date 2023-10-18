@@ -11,8 +11,6 @@ let INITIAL_VALUES = {
   total: 0,
 };
 
-
-
 export function Aside() {
   const {cart}= useContext(CartContext)
   calculateTotals({cart},INITIAL_VALUES);
