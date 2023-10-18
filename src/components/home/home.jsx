@@ -3,11 +3,11 @@ import "./home.css";
 import { Section } from "./section/section";
 import { Article } from "./article/article";
 
-export function Home({ addToCart }) {
+export function Home() {
   return (
     <div>
       <Section  />
-      <Article addToCart={addToCart} />
+      <Article />
     </div>
   );
 }

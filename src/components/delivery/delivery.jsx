@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import styles from "./delivery.module.css";
 
-export function Delivery() {
+export function Delivery({ info }) {
+  console.log("-----")
+  console.log(info)
+
+
   return (
     <div>
       <div className={styles.container}>
@@ -9,7 +13,7 @@ export function Delivery() {
           <h2>¡Eh! orden confirmada</h2>
           <h3>Ahora solo espera que el café te llegue pronto.</h3>
 
-          <div className={styles.infodelivery}>
+          <div className={styles.infodelivery}> 
             <div className={styles.module}>
               <div className={styles.location}>
                 <div className={styles.imagescontainer}>
@@ -17,9 +21,9 @@ export function Delivery() {
                 </div>
                 <div>
                   <span className={styles.text}>
-                    Entrega en <b>Av. de lleida, 120</b>
+                    Entrega en <b>{info.street},{info.number}</b>
                   </span>
-                  <span className={styles.text}>Torrefarrera - Lleida</span>
+                  <span className={styles.text}>{info.population} - {info.province}</span>
                 </div>
               </div>
               <div className={styles.time}>
@@ -40,7 +44,7 @@ export function Delivery() {
                 <div>
                   <span className={styles.text}>Pago a la entrega</span>
                   <span className={styles.text}>
-                    <b>Targeta de crédito </b>
+                    <b>{info.paymentMethod} </b>
                   </span>
                 </div>
               </div>

@@ -11,14 +11,14 @@ let INITIAL_VALUES = {
 
 
 
-export function Aside({ cart, less, more}) {
+export function Aside({ cart}) {
   calculateTotals({cart},INITIAL_VALUES);
 
   return (
     <div className={styles.container}>
       <div className={styles.containertotal}>
         <div>
-        <AsideData cart={cart} less={less} more={more}/>
+        <AsideData cart={cart}/>
         </div>
         <div className={styles.articles}>
           <div>Articulos totales</div>
@@ -34,9 +34,7 @@ export function Aside({ cart, less, more}) {
         </div>
       </div>
       <div className={styles.button}>
-        <a href="/delivery">
-          <button>confirmar pedido</button>
-        </a>
+        <button type="submit">confirmar pedido</button>
       </div>
     </div>
   );

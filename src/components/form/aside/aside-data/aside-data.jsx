@@ -1,8 +1,10 @@
 import styles from "./aside-data.module.css";
 import { formatPriceInEUR } from "../../../../utils/format";
 import coffiesData from "../../../../conts/coffes";
+import { useContext } from "react";
+import { CartContext } from "../../../../lib/context/CartContext";
 
-export function AsideData({ cart, less, more}) {
+export function AsideData({ cart }) {
   const information = cart.map((item) => {
     const coffee = coffiesData.find((c) => c.id === item.id);
     return {
@@ -13,6 +15,10 @@ export function AsideData({ cart, less, more}) {
       units: item.units,
     };
   });
+
+  const { lessUnity } = useContext(CartContext)
+  const { moreUnity } = useContext(CartContext)
+  const { deletecoffee } = useContext(CartContext)
 
   return (
     <div>
@@ -29,16 +35,21 @@ export function AsideData({ cart, less, more}) {
               </span>
             </div>
             <div className={styles.counter}>
-              <button onClick={() => less(item.id)}>
+              <button type="button" onClick={() => lessUnity(item.id)}>
                 <img src="/assets/article/counter/less.svg" />
               </button>
               <p>{item.units}</p>
-              <button onClick={() => more(item.id)}>
+              <button type="button" onClick={() => moreUnity(item.id)}>
                 <img src="/assets/article/counter/more.svg" />
               </button>
             </div>
+            <div className={styles.delete}>
+              <button type="button" onClick={() => deletecoffee(item.id)}>
+                <img src="/assets/form/delete.svg" />
+                Eliminar
+              </button>
+            </div>
           </div>
-            <button  onClick={() => delete(item.id)}> <img src="/assets/article/counter/less.svg"/>Eliminar</button>
         </div>
       ))}
     </div>
