@@ -2,6 +2,8 @@ import styles from "./aside.module.css";
 import { AsideData } from "./aside-data/aside-data";
 import  {calculateTotals} from "./aside-data/aside-data";
 import { formatPriceInEUR } from "../../../utils/format";
+import { CartContext } from "../../../lib/context/CartContext";
+import { useContext } from "react";
 
 let INITIAL_VALUES = {
   totalArticles: 0,
@@ -11,14 +13,15 @@ let INITIAL_VALUES = {
 
 
 
-export function Aside({ cart}) {
+export function Aside() {
+  const {cart}= useContext(CartContext)
   calculateTotals({cart},INITIAL_VALUES);
 
   return (
     <div className={styles.container}>
       <div className={styles.containertotal}>
         <div>
-        <AsideData cart={cart}/>
+        <AsideData/>
         </div>
         <div className={styles.articles}>
           <div>Articulos totales</div>

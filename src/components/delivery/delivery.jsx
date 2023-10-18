@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import styles from "./delivery.module.css";
+import { CartContext } from "../../lib/context/CartContext";
 
-export function Delivery({ info }) {
+export function Delivery() {
+  const {info}= useContext(CartContext)
   console.log("-----")
   console.log(info)
 

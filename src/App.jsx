@@ -88,13 +88,17 @@ function App() {
 
   const cartCount = cart.length
 
+
   return (
     <CartContext.Provider value={{
+      cart,
       cartCount,
+      info,
       addToCart,
       lessUnity,
       moreUnity,
-      deletecoffee
+      deletecoffee,
+      saveinfo
     }}>
       <Router>
         <div className="wrapper">
@@ -104,13 +108,10 @@ function App() {
             <Route
               path="/form"
               element={
-                <Form
-                  cart={cart}
-                  saveinfo={saveinfo}
-                />
+                <Form />
               }
             />
-            <Route path="/delivery" element={<Delivery info={info}/>} />
+            <Route path="/delivery" element={<Delivery />} />
           </Routes>
         </div>
       </Router>

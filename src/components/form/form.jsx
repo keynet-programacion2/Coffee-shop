@@ -1,10 +1,12 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import styles from "./form.module.css";
 import { Aside } from "./aside/aside";
+import { CartContext } from "../../lib/context/CartContext";
 
-export function Form({ cart,saveinfo}) {
+export function Form() {
+  const {saveinfo}= useContext(CartContext)
   const navigate = useNavigate();
   
   function handleSubmit(e) {
@@ -130,7 +132,7 @@ export function Form({ cart,saveinfo}) {
         </div>
         <div className={styles.aside}>
           <h2 className={styles.titles}>cafés seleccionados</h2>
-          <Aside  cart={cart}/>
+          <Aside />
         </div>
       </div>
     </form>

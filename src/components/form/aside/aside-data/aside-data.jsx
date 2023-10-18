@@ -4,7 +4,11 @@ import coffiesData from "../../../../conts/coffes";
 import { useContext } from "react";
 import { CartContext } from "../../../../lib/context/CartContext";
 
-export function AsideData({ cart }) {
+
+
+export function AsideData() {
+  const {cart}= useContext(CartContext)
+
   const information = cart.map((item) => {
     const coffee = coffiesData.find((c) => c.id === item.id);
     return {
@@ -15,10 +19,10 @@ export function AsideData({ cart }) {
       units: item.units,
     };
   });
-
   const { lessUnity } = useContext(CartContext)
   const { moreUnity } = useContext(CartContext)
   const { deletecoffee } = useContext(CartContext)
+
 
   return (
     <div>
